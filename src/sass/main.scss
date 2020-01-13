@@ -1,14 +1,113 @@
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
 @import 'reset';
 @import 'rwd';
 @import 'debug';
 @import 'fonts';
+
 @import './hvr/hover.scss';
+@import './slicknav/slicknav.scss';
+@import './slicknav/core.scss';
+@import './slicknav/theme.scss';
+
+@import 'nav';
+@import 'home';
+@import 'footer';
 
 * {
 	box-sizing: border-box;
+
+	&::selection {
+		background: transparent;
+	}
 }
 
-strong {
+html,
+body {
+	overflow-x: hidden;
+}
+
+:root {
+	--accent: #EE7302;
+	--gray: #D9D9D6;
+
+}
+
+.wrapper {
+	max-width: 1920px;
+}
+
+.wrap-content {
+	max-width: 1300px;
+}
+
+.wrapper,
+.wrap-content {
+	margin: 0 auto;
+}
+
+// ====================================================
+// BUTTONS
+// ====================================================
+
+.more-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #000;
+	color: #fff;
+	background-color: #000;
+	font-size: 23px;
+	text-transform: uppercase;
 	font-weight: 900;
+	text-decoration: none;
+	padding: 8px 10px;
+	max-width: 160px;
+	transition: all .1s ease-in-out;
+
+	@include lg-min {
+		font-size: 12px;
+	}
+
+	&:hover {
+		background: #fff;
+		color: #000;
+	}
+}
+
+.more-btn__white {
+	border: 2px solid #fff;
+	color: #fff;
+
+	&:hover {
+		background: #fff;
+		color: #000;
+	}
+}
+
+input[type="submit"] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid;
+	border-color: var(--accent);
+	color: #fff;
+	background-color: var(--accent);
+	font-size: 23px;
+	text-transform: uppercase;
+	font-weight: 900;
+	text-decoration: none;
+	padding: 8px 10px;
+	max-width: 160px;
+	transition: all .1s ease-in-out;
+	margin: 0 auto;
+	margin-top: 20px;
+
+	@include lg-min {
+		font-size: 12px;
+	}
+
+	&:hover {
+		background: #fff;
+		color: #000;
+	}
 }

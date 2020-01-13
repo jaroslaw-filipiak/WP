@@ -1,0 +1,114 @@
+footer {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+
+    @include lg-min {
+        flex-direction: row;
+    }
+
+    .footer-column {
+        &-1 {
+            width: 100%;
+            padding: 50px 30px 0px 30px;
+
+            @include lg-min {
+                width: 30%;
+                padding-left: 15%;
+            }
+        }
+
+        &-2 {
+            padding: 50px 0px 30px 0px;
+            display: flex;
+            flex-direction: column;
+
+            @include lg-min {
+                width: 35%;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 350px;
+                position: absolute;
+                left: 45vw;
+                background-color: #fff;
+
+                @include lg-min {
+                    display: none;
+                }
+            }
+        }
+
+        &-3 {
+            padding: 40px 30px 0px 30px;
+            display: flex;
+
+            @include lg-min {
+                padding: 40px 30px 0px 170px;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 35%;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0px 10px 0px 30px;
+            position: relative;
+
+            @include lg-min {
+                width: 50%;
+            }
+        }
+
+        &-social-icons-wrapper {
+            width: 55%;
+            margin-top: 10px;
+        }
+
+        &-social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 0;
+
+            li {
+                margin-right: 7px;
+            }
+        }
+    }
+
+    h4 {
+        margin-top: 10px;
+        font-size: 15px;
+        color: var(--accent);
+        text-transform: uppercase;
+        font-weight: regular;
+        width: 40%;
+        text-align: left;
+    }
+
+    ul {
+        width: 50%;
+        padding-left: 10px;
+
+        li {
+            margin: 10px 0px;
+
+            a {
+                color: #fff;
+                font-size: 13px;
+                font-weight: regular;
+                text-decoration: none;
+            }
+        }
+    }
+}

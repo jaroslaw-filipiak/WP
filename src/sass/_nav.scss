@@ -1,0 +1,106 @@
+ .main-menu,
+ .language-bar {
+     @include lg-min {
+         padding-right: 140px;
+     }
+ }
+
+ .desktop-nav {
+     display: none;
+
+     @include lg-min {
+         display: block;
+     }
+ }
+
+ .language-bar {
+     height: 70px;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+
+     ul {
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+
+         li {
+             a {
+                 font-weight: 600;
+                 font-size: 19px;
+                 text-transform: uppercase;
+                 color: #000;
+                 margin: 0px 2px;
+                 text-decoration: none;
+
+             }
+
+             .lang-active {
+                 color: var(--accent);
+             }
+         }
+     }
+ }
+
+
+ .main-menu {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 150px;
+
+     @include lg-min {
+         justify-content: space-between;
+     }
+ }
+
+ ul#menu {
+     display: none;
+
+     @include lg-min {
+         display: flex;
+     }
+
+     li {
+         a {
+             font-weight: 600;
+             font-size: 19px;
+             text-transform: uppercase;
+             color: #000;
+             margin: 0px 10px;
+             text-decoration: none;
+             position: relative;
+
+             &:after {
+                 content: "";
+                 height: 0px;
+             }
+
+             &:hover {
+                 &:after {
+                     content: "";
+                     display: block;
+                     width: 100%;
+                     height: 8px;
+                     background-color: var(--accent);
+                     position: absolute;
+                     bottom: -15px;
+                     left: 0;
+                     transition: all .2s ease-in-out;
+                 }
+             }
+         }
+     }
+ }
+
+ .slicknav_menu {
+     display: block;
+
+     @include lg-min {
+         display: none;
+     }
+ }
+
+ .logo-mobile {
+     max-width: 109px;
+ }
