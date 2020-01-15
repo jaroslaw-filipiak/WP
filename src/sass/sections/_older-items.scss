@@ -1,0 +1,231 @@
+.older-item {
+    &-subtitle {
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 18px;
+    }
+
+    &-excerpt {
+
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 18px;
+
+        @include lg-min {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-item {
+
+        @include lg-min {
+            height: 435px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+}
+
+
+.older {
+    .older-item {
+        .wrap-content {
+            display: flex;
+            flex-direction: column;
+
+            @include lg-min {
+                flex-direction: row;
+            }
+        }
+
+        &:nth-child(even) {
+            .wrap-content {
+                display: flex;
+                flex-direction: column;
+
+                @include lg-min {
+                    flex-direction: row-reverse;
+                }
+
+            }
+
+            .older-item-background {
+                left: initial;
+                right: 0;
+            }
+
+        }
+
+    }
+
+    &-items-btn {
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+
+        a {
+            color: #000;
+            text-decoration: none;
+            text-align: right;
+            margin: 30px 15px;
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
+
+
+    }
+}
+
+.older-item {
+    background: rgba(217, 217, 214, 0.3);
+    padding-top: 20px;
+    position: relative;
+
+    &:nth-child(even) {
+
+        .older-item-item {
+            align-self: flex-start;
+        }
+
+    }
+
+    @include lg-min {
+        background: none;
+        margin-top: 50px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 380px;
+        background-color: var(--accent);
+        position: absolute;
+        left: 0;
+        margin-top: 40px;
+
+        @include lg-min {
+            display: none;
+        }
+    }
+
+    &-background {
+        @include lg-min {
+            background-color: var(--gray);
+            width: 90vw;
+            height: 435px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &-header {
+        display: flex;
+
+        @include lg-min {
+            position: relative;
+        }
+
+        h3 {
+            border: 8px solid;
+            border-color: var(--accent);
+            padding: 30px 15px;
+            font-size: 34px;
+            font-weight: 900;
+            text-transform: uppercase;
+            max-width: 220px;
+            background-color: rgba(255, 255, 255, 0.45);
+            position: absolute;
+            left: 5vw;
+            z-index: 2;
+            margin-top: 122px;
+
+            @include lg-min {
+                left: initial;
+                right: 20px;
+                margin-top: -145px;
+                background: transparent;
+                font-size: 54px;
+                max-width: 310px;
+                padding: 60px 15px;
+            }
+        }
+
+        img {
+            // position: relative;
+            // left: 20vw;
+            // transform: scale(0.8);
+
+            @include lg-min {
+                position: relative;
+                transform: scale(1);
+                left: 0;
+                top: -20px;
+            }
+        }
+    }
+
+    &-item {
+        padding: 30px 15px 20px 15px;
+        color: #000;
+        font-size: 12px;
+        width: 75vw;
+        align-self: flex-end;
+        background-color: var(--gray);
+
+        @include xl-min {
+            width: 40vw;
+            background-color: transparent;
+        }
+
+        @include lg-min {
+            padding: 40px 50px;
+        }
+
+        h2 {
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 18px;
+
+            @include lg-min {
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 300px;
+                    height: 8px;
+                    background-color: var(--accent);
+                    position: relative;
+                    top: -120px;
+                }
+            }
+        }
+
+        &-subtitle {
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 18px;
+        }
+
+        &-excerpt {
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 18px;
+        }
+
+        &__black {
+            color: #fff;
+            background: #000;
+        }
+
+
+    }
+}

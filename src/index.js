@@ -6,6 +6,7 @@ import './../node_modules/aos/src/sass/aos.scss'
 const $ = require('jquery')
 const slick = require('slick-carousel')
 const slicknav = require('slicknav/jquery.slicknav')
+const Hinclude = require('h-include/h-include')
 //const waypoints = require('././../node_modules/waypoints/lib/jquery.waypoints');
 //const Parallax = require('parallax-js');
 //const AOS = require('aos');
@@ -13,6 +14,8 @@ const slicknav = require('slicknav/jquery.slicknav')
 const logoMobile = require('./assets/logo.png');
 
 //AOS.init();
+
+
 
 $('#menu').slicknav({
    duplicate: true,

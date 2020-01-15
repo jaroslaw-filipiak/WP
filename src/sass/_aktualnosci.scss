@@ -1,0 +1,122 @@
+.subpage-heading {
+    height: calc(100vh - 118px);
+    background-image: url(./../assets/aktualnosci-bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include lg-min {
+        padding-top: 100px;
+        background: none;
+        height: initial;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 25px 0px;
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: 900;
+        width: 80vw;
+        position: relative;
+        top: 15vw;
+
+        @include lg-min {
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 900;
+            font-size: 120px;
+            line-height: 80px;
+            text-align: center;
+            background: none;
+            top: initial;
+            width: initial;
+            padding: 0;
+        }
+
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 20%;
+            height: 8px !important;
+            background: #ee7302;
+            background: var(--accent);
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include lg-min {
+                display: none;
+            }
+        }
+
+
+    }
+
+    .orange-is-black-btn__subpage {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        @include lg-min {
+            display: none;
+        }
+    }
+
+    &-info {
+        display: none;
+
+        @include lg-min {
+            display: block;
+            background-color: var(--accent);
+            padding: 55px 0px;
+        }
+
+        p {
+            padding: 0px 20px;
+            flex-basis: 25%;
+        }
+    }
+
+    .wrap-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__mobile-info {
+        background-color: var(--gray);
+        width: 70vw;
+        margin-left: 30vw;
+        padding: 30px 20px;
+
+        @include lg-min {
+            display: none;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .subpage-heading-info {
+            display: block;
+        }
+
+        .mobile-highlight {
+            width: 70vw;
+            font-size: 19px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 30px;
+            border: 8px solid;
+            border-color: var(--accent);
+            padding: 30px 35px;
+            position: relative;
+            left: -15vw;
+            margin-bottom: 30px;
+            margin-top: 70px;
+        }
+    }
+}

@@ -41,6 +41,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
     "css-tooltip": "^0.3.0",
+    "h-include": "^4.2.0",
     "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1",
     "lazyload": "^2.0.0-rc.2",
