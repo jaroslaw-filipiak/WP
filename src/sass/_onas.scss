@@ -1,0 +1,269 @@
+.about-us__page-about-us {
+	padding: 30px 0px;
+
+	.about-us-highlight {
+		margin: -60px 0px 60px 0px;
+
+		@include lg-min {
+			margin: 120px 0px 60px 0px;
+		}
+	}
+
+	.hero-cta-btn__about-us-page {
+		a {
+			width: 100vw;
+			margin-bottom: 30px;
+		}
+	}
+
+	//  orders
+	.about-us-highlight {
+		order: 3;
+
+		@include lg-min {
+			order: initial;
+		}
+	}
+
+	.hero-cta-btn__about-us-page {
+		order: 2;
+
+		@include lg-min {
+			order: initial;
+		}
+	}
+
+	.about-us-info {
+		padding: 0px 15px;
+		order: 1;
+
+		@include lg-min {
+			order: initial;
+			padding-bottom: 150px;
+		}
+	}
+}
+
+// ====================================================
+// SAFETY FIRST
+// ====================================================
+
+.safety-first {
+	.wrap-content {
+		@include lg-min {
+			position: relative;
+			display: flex;
+			margin-bottom: 60px;
+		}
+	}
+
+	&-photo {
+		display: none;
+
+		@include lg-min {
+			display: block;
+			margin-top: -80px;
+		}
+	}
+
+	&-right {
+		padding: 30px 15px;
+
+		@include lg-min {
+			padding: 120px 30px 0px 15px;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		&::after {
+			@include lg-min {
+				content: '';
+				display: block;
+				width: 300px;
+				height: 8px;
+				background-color: rgb(5, 5, 5);
+				position: absolute;
+				bottom: 10px;
+				right: 50px;
+			}
+		}
+	}
+
+	h3 {
+		display: block;
+		font-size: 17px;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		padding: 33px 15px;
+		position: relative;
+		background: #000;
+
+		@include lg-min {
+			background: rgba(255, 255, 255, 0.486);
+			font-size: 55px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #000;
+			position: absolute;
+			left: 0px;
+			padding-left: 65px;
+			top: 0;
+		}
+
+		&::after {
+			content: url(./../assets/arrow-down.svg);
+			display: -webkit-box;
+			display: flex;
+			-webkit-box-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			justify-content: center;
+			width: 85px;
+			height: 100%;
+			background-color: #ee7302;
+			background-color: var(--accent);
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			@include lg-min {
+				content: '';
+				display: block;
+				width: 530px;
+				height: 8px;
+				background: var(--accent);
+				position: absolute;
+				top: initial;
+				bottom: 10px;
+				left: 70px;
+			}
+		}
+	}
+}
+
+.accent-heading {
+	display: inline-block;
+	font-size: 28px;
+	font-weight: 600;
+	color: #000;
+	text-transform: uppercase;
+	background: var(--accent);
+	padding: 10px 15px 10px 15px;
+	margin-top: 20px;
+
+	z-index: 2;
+
+	@include lg-min {
+		font-size: 58px;
+		padding: 10px 100px 10px 160px;
+		margin-top: 0;
+		position: relative;
+		top: 60px;
+	}
+}
+
+// ====================================================
+// BEFORE FOOTER
+// ====================================================
+
+.before-footer {
+	&__contact-box {
+		height: 750px;
+
+		@include lg-min {
+			height: 650px;
+		}
+
+		background-image: url(./../assets/map.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+
+		.before-orange-box {
+			background-color: var(--accent);
+			padding: 60px 40px;
+			display: flex;
+			flex-direction: column;
+
+			@include lg-min {
+				align-items: flex-start;
+				justify-content: center;
+				flex-direction: row;
+			}
+
+			&-item {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 20px 50px;
+
+				@include lg-min {
+					width: 33%;
+				}
+
+				h4,
+				p,
+				a {
+					text-align: center;
+				}
+
+				h4 {
+					display: none;
+
+					@include lg-min {
+						display: block;
+						font-size: 23px;
+						font-weight: 600;
+						text-transform: uppercase;
+						margin-bottom: 45px;
+					}
+				}
+
+				a {
+					display: block;
+					margin: 0 auto;
+					color: #fff;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+
+				strong {
+					display: block;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-item-center {
+				@include lg-min {
+					border-right: 1px solid white;
+					border-left: 1px solid white;
+				}
+			}
+		}
+
+		h3 {
+			font-size: 30px;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__black-box {
+		background: rgba(0, 0, 0, 0.336);
+		max-height: 550px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		top: 50px;
+		padding: 50px 0px;
+		color: #fff;
+	}
+}

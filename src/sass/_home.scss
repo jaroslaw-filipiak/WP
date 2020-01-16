@@ -2,6 +2,35 @@
 // HERO SLIDER
 // ====================================================
 
+
+.hero__page-onas {
+   @include lg-min {
+      margin-top: 60px;
+   }
+
+
+   .hero-slide {
+      background-image: url(./../assets/onas-photo.jpg);
+      background-size: cover;
+      overflow: visible;
+
+      @include lg-min {
+         position: relative;
+         max-width: 1149px;
+      }
+   }
+
+   .slick-slide {
+      height: calc(70vh - 118px) !important;
+
+      @include lg-min {
+         height: 567px !important;
+      }
+   }
+}
+
+
+
 .hero {
    &-slide {
       background-image: url(./../assets/slider.jpg);
@@ -100,7 +129,7 @@
          font-weight: 900;
 
          @include lg-min {
-            font-size: 60px;
+            font-size: 50px;
             padding: 95px 0px 50px 0px;
          }
       }

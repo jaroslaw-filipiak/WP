@@ -120,3 +120,25 @@
         }
     }
 }
+
+.subpage-heading__left {
+
+    display: none;
+    // height: calc(60vh - 118px);
+    // background-image: url(./../assets/onas-photo.jpg);
+
+    @include lg-min {
+        display: block;
+        background-image: none;
+        height: auto;
+    }
+
+    h1 {
+        @include lg-min {
+            text-align: left;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+    }
+
+}
