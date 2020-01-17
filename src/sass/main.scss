@@ -19,6 +19,7 @@
 @import 'footer';
 @import 'aktualnosci';
 @import 'onas';
+@import 'wsparcie';
 
 
 * {
@@ -79,6 +80,10 @@ body {
 	&:hover {
 		background: #fff;
 		color: #000;
+	}
+
+	&__fullwidth {
+		max-width: 100%;
 	}
 }
 
@@ -150,4 +155,8 @@ input[type="submit"] {
 	@include lg-min {
 		display: none;
 	}
+}
+
+.inline-block {
+	display: inline-block;
 }

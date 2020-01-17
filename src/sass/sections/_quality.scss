@@ -178,6 +178,26 @@
                 top: -20px;
             }
         }
+
+        &__katalog {
+
+            position: relative !important;
+
+            .katalog-after {
+                position: absolute;
+                left: 20px;
+                top: 0;
+                z-index: 2;
+
+                @include lg-min {
+
+                    left: -62px;
+                    top: -71px;
+
+                }
+
+            }
+        }
     }
 
     &-item {
@@ -201,9 +221,11 @@
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 20px;
-            line-height: 18px;
+            line-height: 33px;
 
             @include lg-min {
+
+
                 &::before {
                     content: '';
                     display: block;
