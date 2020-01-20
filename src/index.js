@@ -11,10 +11,9 @@ const slicknav = require('slicknav/jquery.slicknav')
 //const AOS = require('aos');
 
 const logoMobile = require('./assets/logo.png');
+const searchIcon = require('./assets/search.svg')
 
 //AOS.init();
-
-
 
 $('#menu').slicknav({
    duplicate: true,
@@ -37,3 +36,11 @@ if (document.querySelector('.hero-slider')) {
       nextArrow: $('.hero-slider-nav-next'),
    })
 }
+
+const searchBox = `
+<div class="searchBox"> 
+   <img src="${searchIcon}" />
+</div>`
+
+
+$('.slicknav_menu').after(searchBox);

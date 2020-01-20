@@ -1,12 +1,12 @@
 //colors
 $color_0: rgba(255, 255, 255, 0.75);
 $color_btn: rgba(34, 34, 34, 0);
-$color_text: rgb(7, 7, 7);
+$color_text: rgb(255, 255, 255);
 $color_shadow: #000;
 $color_bg: #ffffff;
-$color_hover_bg: #ccc;
-$color_hover_text: #222;
-$hamburger: red;
+$color_hover_bg: #D26500;
+$color_hover_text: #fff;
+$hamburger: var(--accent);
 
 
 .slicknav_menu {
@@ -15,6 +15,7 @@ $hamburger: red;
 	background: $color_bg;
 	padding: 20px 0px;
 	height: 118px;
+	width: 80vw;
 
 	&::before {
 		display: block;
@@ -59,6 +60,7 @@ $hamburger: red;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	background-color: $color_btn;
+	margin-top: 20px;
 }
 
 .slicknav_nav {
@@ -68,13 +70,20 @@ $hamburger: red;
 	font-size: 0.875em;
 	list-style: none;
 	overflow: hidden;
-	padding-top: 80px;
+	// padding-top: 80px;
+
+	position: absolute;
+	background: var(--accent);
+	z-index: 30;
+	width: 80vw;
+	top: 118px;
 
 	ul {
 		list-style: none;
 		overflow: hidden;
 		padding: 0;
 		margin: 0 0 0 20px;
+
 	}
 
 	.slicknav_row {
@@ -91,10 +100,14 @@ $hamburger: red;
 	}
 
 	a {
-		padding: 5px 10px;
+		padding: 17px 10px;
 		margin: 2px 5px;
 		text-decoration: none;
 		color: $color_text;
+		font-size: 19px;
+		text-transform: uppercase;
+		font-weight: 600;
+		border-bottom: 1px solid #D9D9D6;
 
 		&:hover {
 			-webkit-border-radius: 6px;
@@ -103,6 +116,10 @@ $hamburger: red;
 			background: $color_hover_bg;
 			color: $color_hover_text;
 		}
+
+
+
+
 	}
 
 	.slicknav_txtnode {

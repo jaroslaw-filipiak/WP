@@ -104,3 +104,14 @@
  .logo-mobile {
      max-width: 109px;
  }
+
+ .searchBox {
+     width: 10vw;
+     position: absolute;
+     top: 49px;
+     right: 20px;
+
+     @include lg-min {
+         display: none;
+     }
+ }
