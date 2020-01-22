@@ -31,6 +31,7 @@
 
 
 
+
 .hero {
    &-slide {
       background-image: url(./../assets/slider.jpg);
@@ -40,6 +41,10 @@
       @include lg-min {
          position: relative;
          max-width: 1149px;
+      }
+
+      &__flexline {
+         background-image: url(./../assets/slider-flexline.jpg);
       }
    }
 

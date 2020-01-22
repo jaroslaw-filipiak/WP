@@ -1,0 +1,65 @@
+.flex-line-loop {
+
+    @include lg-min {
+        margin-top: -130px;
+    }
+
+    .flex-line-loop-table {
+        background-color: #fff;
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 100px;
+
+
+        thead {
+            background-color: var(--accent);
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 10px;
+
+            @include lg-min {
+                font-size: 20px;
+            }
+
+            tr {
+
+                th {
+                    padding: 8px 0px;
+
+                }
+
+            }
+        }
+
+        tbody {
+            td {
+                text-align: center;
+                margin: 0 auto;
+                padding: 20px 0px;
+                border-bottom: 1px solid #d9d9d6;
+
+                font-size: 10px;
+
+                @include lg-min {
+                    font-size: 16px;
+                }
+
+                img {
+                    border: 2px solid;
+                    border-color: var(--accent);
+
+                    max-width: 32px;
+
+                    @include lg-min {
+                        max-width: 98px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
