@@ -343,6 +343,28 @@ $sectionOffset: 300px;
          flex-direction: row-reverse;
       }
    }
+
+   .offer-box-item__full {
+      width: 100%;
+      align-self: flex-start;
+
+      @include lg-min {
+         text-align: right;
+         align-self: flex-end;
+      }
+
+
+      h2 {
+         @include lg-min {
+            &:before {
+               content: "";
+               position: absolute;
+               right: 18vw;
+               top: 14px;
+            }
+         }
+      }
+   }
 }
 
 .offer-box__reverse {
@@ -382,6 +404,8 @@ $sectionOffset: 300px;
          }
       }
    }
+
+
 
    .offer-box-header {
       h3 {
