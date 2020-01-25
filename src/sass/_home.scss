@@ -438,6 +438,7 @@ $sectionOffset: 300px;
 .logo-waypoint {
    display: none;
 
+
    @include xxl-min {
       display: block;
       position: relative;

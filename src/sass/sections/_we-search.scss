@@ -1,0 +1,159 @@
+.we-search-actually {
+    margin: 30px 0px;
+    position: relative;
+
+    @include lg-min {
+        margin: 30px 0px 80px 0px;
+    }
+
+    &:nth-child(even) {
+
+        .we-search-actually-gray-box {
+            left: initial;
+            right: 0;
+        }
+
+
+        .wrap-content {
+
+            .we-search-actually-highlight {
+                @include lg-min {
+                    position: relative;
+                    left: 65%;
+                }
+
+
+            }
+
+        }
+    }
+
+
+    &-gray-box {
+        position: absolute;
+        background-color: var(--gray);
+        width: 88vw;
+        height: 640px;
+        left: 0;
+        top: 150px;
+        z-index: -1;
+
+
+    }
+
+    &-highlight {
+        font-size: 35px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 39px;
+        border: 8px solid;
+        border-color: var(--accent);
+        padding: 50px 35px 50px 55px;
+        max-width: 600px;
+        margin-bottom: 200px;
+
+        position: relative;
+        left: -50px;
+
+        @include lg-min {
+            padding: 30px 65px;
+            position: relative;
+            left: 0px;
+            font-size: 53px;
+        }
+
+        // &__on-right {
+        //     @include lg-min {
+        //         left: 61vw;
+        //     }
+
+        // }
+
+    }
+
+    &-team {
+        margin-top: 30px;
+        background-color: var(--accent);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-right: 9vw solid white;
+
+        @include lg-min {
+            flex-direction: row;
+            border-right: none;
+        }
+    }
+
+    &-person {
+        position: relative;
+        top: -100px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+
+        @include lg-min {
+            padding-bottom: 0;
+        }
+
+
+        a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .person-info {
+        margin-top: 30px;
+        padding: 0px 50px;
+
+        border-bottom: 2px solid white;
+        padding-bottom: 30px;
+
+        @include lg-min {
+            border-bottom: none;
+            padding-bottom: 0px;
+        }
+
+        h3 {
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
+
+        .apply-for-this-job {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: right;
+            margin-top: 50px;
+        }
+    }
+}
