@@ -44,3 +44,21 @@ const searchBox = `
 
 
 $('.slicknav_menu').after(searchBox);
+
+if (document.querySelector('.for-download-toogle')) {
+
+   $.fn.extend({
+      toggleText: function (a, b) {
+         return this.text(this.text() == b ? a : b);
+      }
+   });
+
+
+   $('.for-download-toogle').click(() => {
+      $('.for-download-toogle-content').slideToggle(200, "linear");
+      $('.for-download-toogle h4').toggleClass('minus-before')
+      $('.for-download-toogle h4').toggleText('Rozwiń', 'Zwiń')
+
+
+   })
+}
