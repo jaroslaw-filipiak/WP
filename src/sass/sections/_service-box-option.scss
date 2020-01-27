@@ -1,127 +1,149 @@
 .service-box-option {
-    position: relative;
+	position: relative;
+	padding: 30px 0px;
 
-    padding: 30px 0px;
+	@include lg-min {
+		padding: 60px 0px;
+	}
 
-    @include lg-min {
-        padding: 60px 0px;
-    }
+	.wrap-content {
+		display: flex;
+		flex-direction: column;
 
+		@include lg-min {
+			flex-direction: row;
+		}
+	}
 
-    .wrap-content {
-        display: flex;
-        flex-direction: column;
+	&:nth-child(odd) {
+		&::before {
+			display: none;
 
-        @include lg-min {
-            flex-direction: row;
-        }
-    }
+			@include lg-min {
+				content: '';
+				display: block;
+				width: 15px;
+				height: 80%;
+				background-color: var(--accent);
+				position: absolute;
+				right: 0;
+				left: initial;
+			}
+		}
 
-    &::before {
+		.wrap-content {
+			@include lg-min {
+				flex-direction: row-reverse;
+			}
+		}
 
-        display: none;
+		.service-box-option-gray-box {
+			position: absolute;
+			background-color: var(--gray);
+			width: 88vw;
+			height: 65%;
+			left: 0;
+			top: 110px;
+			z-index: -1;
+		}
+	}
 
-        @include lg-min {
-            content: "";
-            display: block;
-            width: 15px;
-            height: 80%;
-            background-color: var(--accent);
-            position: absolute;
-            left: 0;
-        }
+	&::before {
+		display: none;
 
-    }
+		@include lg-min {
+			content: '';
+			display: block;
+			width: 15px;
+			height: 80%;
+			background-color: var(--accent);
+			position: absolute;
+			left: 0;
+		}
+	}
 
-    &-gray-box {
-        position: absolute;
-        background-color: var(--gray);
-        width: 88vw;
-        height: 65%;
-        right: 0;
-        top: 110px;
-        z-index: -1;
-    }
+	&-gray-box {
+		position: absolute;
+		background-color: var(--gray);
+		width: 88vw;
+		height: 65%;
+		right: 0;
+		top: 110px;
+		z-index: -1;
+	}
 
-    &-right,
-    &-left {
-        width: 100%;
+	&-right,
+	&-left {
+		width: 100%;
 
+		@include lg-min {
+			width: 50%;
+			margin: 0px 15px;
+			padding: 30px 20px;
+		}
+	}
 
-        @include lg-min {
-            width: 50%;
-            margin: 0px 15px;
-            padding: 30px 20px;
-        }
+	&-right {
+		background-color: var(--accent);
+		padding: 20px 15px;
+		width: 90vw;
+		margin-left: 10vw;
 
-    }
+		@include lg-min {
+			width: 50%;
+			margin-left: 0;
+		}
+	}
 
-    &-right {
-        background-color: var(--accent);
-        padding: 20px 15px;
-        width: 90vw;
-        margin-left: 10vw;
+	p {
+		padding: 50px 0px;
+		font-weight: 600;
+	}
 
-        @include lg-min {
-            width: 50%;
-            margin-left: 0;
-        }
-    }
+	h3 {
+		font-size: 28px;
+		text-transform: uppercase;
+		color: #000;
+		display: block;
+		background: #fff;
+		padding: 8px 20px;
+		font-weight: 600;
 
-    p {
-        padding: 50px 0px;
-        font-weight: 600;
-    }
+		@include lg-min {
+			position: relative;
+			left: -7%;
+			font-size: 36px;
+		}
+	}
 
-    h3 {
-        font-size: 28px;
-        text-transform: uppercase;
-        color: #000;
-        display: block;
-        background: #fff;
-        padding: 8px 20px;
-        font-weight: 600;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 
-        @include lg-min {
-            position: relative;
-            left: -7%;
-            font-size: 36px;
-        }
-    }
+	table {
+		width: 100%;
 
-    img {
-        max-width: 100%;
-        height: auto;
-        ;
-    }
+		@include lg-min {
+			width: 60%;
+		}
 
-    table {
-        width: 100%;
+		text-align: center;
+		margin: 0 auto;
 
-        @include lg-min {
-            width: 60%;
-        }
+		thead {
+			th {
+				padding: 10px 0px;
+				font-weight: 600;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+			}
+		}
 
-        text-align: center;
-        margin: 0 auto;
-
-        thead {
-
-
-            th {
-                padding: 10px 0px;
-                font-weight: 600;
-                text-transform: uppercase;
-                border-bottom: 1px solid white
-            }
-
-
-        }
-
-        tbody {
-            td {
-                padding: 20px 0px 0px 0px;
-            }
-        }
-    }
+		tbody {
+			td {
+				padding: 20px 0px 0px 0px;
+			}
+		}
+	}
 }
