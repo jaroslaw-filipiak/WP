@@ -1,0 +1,118 @@
+$sectionOffsetFlexline: 300px !important;
+
+.about-us__flexline {
+
+    overflow: visible !important;
+
+    @include lg-min {
+        margin-top: -$sectionOffsetFlexline !important;
+        padding: 30px 15px 50px 15px !important;
+    }
+
+
+    &-before-gray-elem {
+        display: none;
+
+        @include lg-min {
+            display: block;
+            height: $sectionOffsetFlexline;
+        }
+    }
+
+    &-wrapper {
+        overflow: visible !important;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        position: relative;
+
+        @include lg-min {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+    }
+
+    &-heading {
+        display: none;
+
+        @include lg-min {
+            display: block;
+        }
+
+        h3 {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+        }
+    }
+
+    &-info {
+        @include lg-min {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 90px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            @include lg-min {
+                width: 30%;
+                padding: 0px 10px;
+            }
+        }
+    }
+
+    &-read-more-btn {
+        font-size: 14px;
+        font-weight: 400;
+        color: #000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        margin-top: 30px;
+
+        @include lg-min {
+            margin-top: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+    }
+
+    &-highlight {
+        font-size: 19px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 30px;
+        border: 8px solid;
+        border-color: var(--accent);
+        padding: 30px 65px;
+        overflow: visible !important;
+        max-width: 290px !important;
+        // margin: 120px 0px 60px 0px;
+        position: relative;
+        left: 15vw;
+        // top: 120px !important;
+        top: 0 !important;
+        margin-bottom: 30px;
+
+
+        @include lg-min {
+            left: 0;
+            top: 120px !important;
+            margin: 0;
+        }
+    }
+}

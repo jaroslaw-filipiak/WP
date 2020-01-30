@@ -138,6 +138,10 @@
       bottom: 100px;
 
       @include lg-min {
+         right: 4vw;
+      }
+
+      @include xxl-min {
          max-width: 670px;
          right: -135px;
          bottom: 150px;
@@ -188,6 +192,27 @@
          @include lg-min {
             margin-bottom: 55px;
          }
+      }
+   }
+
+   &-info-box__flexline {
+
+      h2 {
+         @include xl-min {
+            font-size: 77px;
+         }
+
+      }
+
+      &::before {
+         content: '';
+         display: block;
+         width: 135px;
+         height: 8px;
+         background: var(--accent);
+         position: absolute;
+         right: 0;
+         top: 0;
       }
    }
 

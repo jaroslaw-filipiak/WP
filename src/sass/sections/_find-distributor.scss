@@ -1,0 +1,44 @@
+#map {
+    height: 450px;
+}
+
+.find-distributor {
+    padding: 60px 0px;
+
+    &-header {
+        h3 {
+            font-size: 36px;
+        }
+
+        p {
+            max-width: 540px;
+            padding: 30px 0px;
+        }
+
+
+    }
+
+    &-searchbox {
+        input[type="search"] {
+            padding: 10px 20px;
+            width: 440px;
+        }
+
+        input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            padding: 11px 20px;
+            display: inline-block;
+            max-width: initial;
+            border: none;
+            cursor: pointer;
+            margin-left: 20px;
+
+            &:hover {
+                background-color: var(--accent);
+            }
+        }
+    }
+
+
+}

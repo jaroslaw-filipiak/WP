@@ -59,6 +59,5 @@ if (document.querySelector('.for-download-toogle')) {
       $('.for-download-toogle h4').toggleClass('minus-before')
       $('.for-download-toogle h4').toggleText('Rozwiń', 'Zwiń')
 
-
    })
 }
